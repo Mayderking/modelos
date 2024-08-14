@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lista de clientes</title>
+  <title>Lista de clientes</title>
 </head>
 <body>
-    <h1>Lista de clientes</h1>
-    <ul>
-        {% for cliente in clientes}
-        <li>{{ cliente.nombre }} - {{ cliente.email }} - {{ cliente.telefono }}</li>
-        {% endfor %}
-    </ul>
+  <h1>Lista de Clientes</h1>
+  <ul>
+    {% for cliente in clientes %}
+      <li>{{ cliente.nombre }} - {{ cliente.email }} - {{ cliente.telefono }}</li>
+    {% endfor %}
+  </ul>
 </body>
 </html>
