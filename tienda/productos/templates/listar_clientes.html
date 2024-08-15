@@ -10,5 +10,9 @@
       <li>{{ cliente.nombre }} - {{ cliente.email }} - {{ cliente.telefono }}</li>
     {% endfor %}
   </ul>
+  <!-- Enlace para agregar un nuevo cliente -->
+  <a href="{% url 'agregar_cliente' %}">Agregar Nuevo Cliente</a>
+  <!-- Enlace para ver la lista de productos -->
+  <a href="{% url 'listar_productos' %}">Ver Productos</a>
 </body>
 </html>
