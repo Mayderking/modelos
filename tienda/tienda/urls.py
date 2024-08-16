@@ -21,5 +21,5 @@ from productos.views import inicio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio, name='inicio'),
-    path('', include('productos.urls')),
+    path('productos/', include('productos.urls')), #siempre q hagamos un cambio en las rutas generales, reiniciar el servidor
 ]

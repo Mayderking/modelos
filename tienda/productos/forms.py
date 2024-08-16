@@ -12,6 +12,12 @@ class ProductoModelForm(forms.ModelForm):
         if precio <= 0: #con esta validacion nos aseguramos que aparezca un error si el precio es menor a cero.
             raise forms.ValidationError('El precio debe ser mayor que cero. ')
         return precio
+    
+    def clean_stock(self):
+        stock = self.cleaned_data.get('stock')
+        if stock <= 0:
+            raise forms.ValidationError('no se puede una cantidad negativa. ')
+        return stock
 
 class ClienteModelForm(forms.ModelForm):
     class Meta:
